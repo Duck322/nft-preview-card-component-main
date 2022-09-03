@@ -1,33 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | NFT preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | NFT preview card component</title>
 
-  Equilibrium #3429
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 100%;
+      }
 
-  Our Equilibrium collection promotes balance and calm.
+      main {
+        display: flex;
+        flex-direction: column;
+        border: solid 2px red;
+        margin-top: 3%;
+        width: 350px;
+      }
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+      main img {
+        border-radius: 25px;
+        width: 90%;
+        padding: 5%;
+      }
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      main h1 {
+        text-align: left;
+        padding-left: 5%;
+      }
+      p {
+        font-size: 18px;
+        padding-left: 5%;
+      }
+      .attribution {
+        font-size: 0.7em;
+        text-align: center;
+        margin-top: 2em;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="images/image-equilibrium.jpg" alt="equilibrium art" />
+      <h1>Equilibrium #3429</h1>
+      <p>
+        Equilibrium collection promotes<br />
+        balance and calm.
+      </p>
+
+      <p>
+        <span style="float: left">0.041 ETH</span>
+        <span style="float: right">Only three days left</span>
+      </p>
+      <hr style="width: 90%" />
+      <p>Creation of Jules Wyvern</p>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Jeremy</a>.
+    </div>
+  </body>
 </html>
