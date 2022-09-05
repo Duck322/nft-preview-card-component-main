@@ -1,0 +1,139 @@
+* {
+  font-family: "outfit", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 100%;
+  background-color: hsl(217, 54%, 11%);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  width: 350px;
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 15px;
+}
+
+main img {
+  border-radius: 25px;
+  width: 90%;
+  padding: 5%;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 17px;
+  bottom: 0;
+  left: 18px;
+  right: 0;
+  border-radius: 7px;
+  width: 315px;
+  height: 315px;
+  opacity: 0%;
+  background: url(images/icon-view.svg) hsl(178, 100%, 50%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container:hover .overlay {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+main h1 {
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 3%;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  font-size: 22px;
+  margin: 0%;
+}
+
+main h1:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.creation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 6%;
+}
+
+.description {
+  font-size: 1em;
+  text-align: left;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  padding-left: 5%;
+}
+
+.avatar {
+  width: 10%;
+  border: 2px hsl(0, 0%, 100%);
+  border-style: solid;
+  border-radius: 50%;
+  padding: 0%;
+}
+
+.ethereum {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0%;
+}
+
+#icon-eth {
+  width: 11px;
+  padding: 1%;
+  padding-left: 5%;
+}
+
+#icon-clock {
+  width: 17px;
+  padding-left: 35%;
+  padding-right: 1%;
+}
+
+#creator:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 5%;
+  color: hsl(215, 51%, 70%);
+}
+
+.attribution a {
+  color: hsl(0, 0%, 100%);
+}
