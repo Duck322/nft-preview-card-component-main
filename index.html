@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="icon"
       type="image/png"
@@ -16,6 +16,10 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      * {
+        font-family: "outfit", sans-serif;
+      }
+
       body {
         display: flex;
         flex-direction: column;
@@ -23,14 +27,20 @@
         align-items: center;
         flex-wrap: wrap;
         font-size: 100%;
+        background-color: hsl(217, 54%, 11%);
+      }
+
+      body::-webkit-scrollbar {
+        display: none;
       }
 
       main {
         display: flex;
         flex-direction: column;
-        border: solid 2px red;
         margin-top: 3%;
         width: 350px;
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 15px;
       }
 
       main img {
@@ -39,39 +49,147 @@
         padding: 5%;
       }
 
+      .container {
+        position: relative;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 17px;
+        bottom: 0;
+        left: 18px;
+        right: 0;
+        border-radius: 7px;
+        width: 315px;
+        height: 315px;
+        opacity: 0%;
+        background: url(images/icon-view.svg) #00fff7;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .container:hover .overlay {
+        opacity: 60%;
+        cursor: pointer;
+      }
+
       main h1 {
         text-align: left;
         padding-left: 5%;
+        padding-top: 3%;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 22px;
+        margin: 0%;
       }
+
+      main h1:hover {
+        color: #00fff7;
+        cursor: pointer;
+      }
+
       p {
         font-size: 18px;
         padding-left: 5%;
+        padding-right: 5%;
+        font-weight: 400;
+        color: hsl(215, 51%, 70%);
       }
+
+      .creation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 5%;
+        padding-top: 3%;
+        padding-bottom: 6%;
+      }
+
+      .description {
+        font-size: 1em;
+        text-align: left;
+        font-weight: 300;
+        color: white;
+        padding-left: 5%;
+      }
+
+      .avatar {
+        width: 10%;
+        border: 2px white;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0%;
+      }
+
+      .ethereum {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0%;
+      }
+
+      #icon-eth {
+        width: 11px;
+        padding: 1%;
+        padding-left: 5%;
+      }
+
+      #icon-clock {
+        width: 17px;
+        padding-left: 35%;
+        padding-right: 1%;
+      }
+
+      #creator:hover {
+        color: #00fff7;
+        cursor: pointer;
+      }
+
       .attribution {
         font-size: 0.7em;
         text-align: center;
-        margin-top: 2em;
+        margin-top: 5%;
+        color: hsl(215, 51%, 70%);
       }
+
       .attribution a {
-        color: hsl(228, 45%, 44%);
+        color: white;
       }
     </style>
   </head>
   <body>
     <main>
-      <img src="images/image-equilibrium.jpg" alt="equilibrium art" />
+      <div class="container">
+        <img
+          id="block"
+          src="images/image-equilibrium.jpg"
+          alt="equilibrium art"
+        />
+        <div class="overlay"></div>
+      </div>
       <h1>Equilibrium #3429</h1>
       <p>
-        Equilibrium collection promotes<br />
+        Our Equilibrium collection promotes<br />
         balance and calm.
       </p>
 
-      <p>
-        <span style="float: left">0.041 ETH</span>
-        <span style="float: right">Only three days left</span>
-      </p>
-      <hr style="width: 90%" />
-      <p>Creation of Jules Wyvern</p>
+      <div class="ethereum">
+        <img id="icon-eth" src="images/icon-ethereum.svg" alt="ethereum icon" />
+        <span style="color: #00fff7">0.041 ETH</span>
+
+        <img id="icon-clock" src="images/icon-clock.svg" alt="clock" />
+        <span style="color: hsl(215, 51%, 70%)">3 days left</span>
+      </div>
+
+      <hr style="width: 90%" color="hsl(215,51%,70%)" />
+
+      <div class="creation">
+        <img class="avatar" src="images/image-avatar.png" alt="avatar" />
+        <h2 class="description">
+          <span style="color: hsl(215, 51%, 70%)">Creation of</span
+          ><span id="creator"> Jules Wyvern</span>
+        </h2>
+      </div>
     </main>
 
     <div class="attribution">
