@@ -137,3 +137,7 @@ p {
 .attribution a {
   color: hsl(0, 0%, 100%);
 }
+
+.attribution a:hover {
+  color: hsl(178, 100%, 50%);
+}
